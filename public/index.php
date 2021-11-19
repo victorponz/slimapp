@@ -16,4 +16,7 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
 
     return $response;
 });
+//Ruta, controlador:método
+$app->get('/', 'Ieselcaminas\App\Controllers\PageController:home');
+$app->get('/about', 'Ieselcaminas\App\Controllers\PageController:about');
 $app->run();
